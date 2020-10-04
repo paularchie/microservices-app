@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@vt
+      - uses: actions/checkout@v2
       - run: cd auth && docker build -t stephengrider/auth .
       - run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
         env:
